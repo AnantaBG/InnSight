@@ -1,0 +1,514 @@
+[
+  {
+    "name": "The Westin Dhaka",
+    "BannerimageUrl": "https://i.ibb.co.com/mSch1FQ/WestinB.webp",
+    "imageUrl1": "https://i.ibb.co.com/bLmCpX6/Westin1.jpg",
+    "imageUrl2": "https://i.ibb.co.com/yqJmQSK/Westin2.jpg",
+    "rating": 4.5,
+    "price": "$150",
+    "location": {
+      "coordinates": [23.799999, 90.400002],
+      "description": "Gulshan, Dhaka"
+    },
+    "description": "A luxurious 5-star hotel offering elegant rooms, a rooftop infinity pool, a spa, and multiple dining options.",
+    "amenities": [
+      "Spa",
+      "Fitness Center",
+      "Restaurant",
+      "Bar",
+      "Pool",
+      "Free Wi-Fi"
+    ]
+  },
+  {
+    "name": "Le Méridien Dhaka",
+    "BannerimageUrl": "https://i.ibb.co.com/kqm5gpp/Le-M-ridien-B.jpg",
+    "imageUrl1": "https://i.ibb.co.com/5v7njqv/Le-M-ridien1.jpg",
+    "imageUrl2": "https://i.ibb.co.com/BGBKGTq/Le-M-ridien2.webp",
+    "rating": 4.2,
+    "price": "$120",
+    "location": {
+      "coordinates": [23.799999, 90.400002],
+      "description": "Dhaka"
+    },
+    "description": "A stylish hotel with modern amenities, including a fitness center, a restaurant, and a bar.",
+    "amenities": [
+      "Spa",
+      "Fitness Center",
+      "Restaurant",
+      "Bar",
+      "Pool",
+      "Free Wi-Fi"
+    ]
+  },
+  {
+    "name": "Hotel Sarina Dhaka",
+    "BannerimageUrl": "https://i.ibb.co.com/zXNqPpN/SarinaB.jpg",
+    "imageUrl1": "https://i.ibb.co.com/xHs2sGL/Sarina1.jpg",
+    "imageUrl2": "https://i.ibb.co.com/NjYtw9t/Sarina2.jpg",
+    "rating": 4,
+    "price": "$80",
+    "location": {
+      "coordinates": [23.799999, 90.400002],
+      "description": "Dhaka"
+    },
+    "description": "A comfortable and affordable hotel with clean and spacious rooms, ideal for budget travelers.",
+    "amenities": [
+      "Restaurant",
+      "Bar",
+      "Meeting Rooms",
+      "Free Wi-Fi",
+      "Room Service"
+    ]
+  },
+  {
+    "name": "Pan Pacific Sonargaon Dhaka",
+    "BannerimageUrl": "https://i.ibb.co.com/GMsj2RP/PanB.jpg",
+    "imageUrl1": "https://i.ibb.co.com/KDZkT55/Pan1.jpg",
+    "imageUrl2": "https://i.ibb.co.com/CtnLM7c/Pan2.jpg",
+    "rating": 4.5,
+    "price": "$160",
+    "location": {
+      "coordinates": [23.799999, 90.400002],
+      "description": "Dhaka"
+    },
+    "description": "Refined hotel with international eateries, chic bars & an outdoor pool.",
+    "amenities": [
+      "Spa",
+      "Fitness Center",
+      "Multiple Restaurants",
+      "Pool",
+      "Business Center",
+      "Free Wi-Fi"
+    ]
+  },
+  {
+    "name": "Sayeman Beach Resort",
+    "BannerimageUrl": "https://i.ibb.co.com/GtSg0r9/SayemonB.jpg",
+    "imageUrl1": "https://i.ibb.co.com/XjYDrPR/Sayemon1.jpg",
+    "imageUrl2": "https://i.ibb.co.com/YQLz0Zd/Sayemon2.jpg",
+    "rating": 4.5,
+    "price": "$200",
+    "location": {
+      "coordinates": [21.4333, 91.9833],
+      "description": "Cox's Bazar"
+    },
+    "description": "Luxurious beachfront resort with multiple pools, restaurants, and a spa.",
+    "amenities": [
+      "Multiple Pools",
+      "Restaurants",
+      "Spa",
+      "Bar"
+    ]
+  },
+  {
+    "name": "Long Beach Hotel Cox's Bazar",
+    "BannerimageUrl": "https://i.ibb.co.com/C6zQyFf/LongB.jpg",
+    "imageUrl1": "https://i.ibb.co.com/FYdsRYH/Long1.jpg",
+    "imageUrl2": "https://i.ibb.co.com/JRYMzjy/Long2.jpg",
+    "rating": 4.3,
+    "price": "$150",
+    "location": {
+      "coordinates": [21.4333, 91.9833],
+      "description": "Cox's Bazar"
+    },
+    "description": "Modern hotel with stunning ocean views, multiple dining options, and a rooftop pool.",
+    "amenities": [
+      "Beach Access",
+      "Spa",
+      "Pool",
+      "Multiple Restaurants",
+      "Water Sports",
+      "Free Wi-Fi"
+    ]
+  },
+  {
+    "name": "The Radisson Blu Chittagong Bay View",
+    "BannerimageUrl": "https://i.ibb.co.com/2SgZtR4/Radisson-B.webp",
+    "imageUrl1": "https://i.ibb.co.com/jyNhCdG/Radisson1.jpg",
+    "imageUrl2": "https://i.ibb.co.com/5FnCrwM/Radisson2.jpg",
+    "rating": 4.4,
+    "price": "$175",
+    "location": {
+      "coordinates": [22.3569, 91.8355],
+      "description": "Chittagong"
+    },
+    "description": "Modern hotel with stunning bay views, a rooftop pool, and a variety of dining options.",
+    "amenities": [
+      "Rooftop pool",
+      "Variety of dining options"
+    ]
+  },
+  {
+    "name": "Hotel Agrabad International",
+    "BannerimageUrl": "https://i.ibb.co/72yXs5B/AgrabadB.jpg",
+    "imageUrl1": "https://i.ibb.co/tcRvYzH/Agrabad1.jpg",
+    "imageUrl2": "https://i.ibb.co/0Mxf3wr/Agrabad2.jpg",
+    "rating": 4.2,
+    "price": "$120",
+    "location": {
+      "coordinates": [22.3569, 91.8355],
+      "description": "Chittagong"
+    },
+    "description": "Comfortable hotel with a central location, offering clean and spacious rooms and friendly service.",
+    "amenities":[
+      "Gym",
+      "Restaurant",
+      "Business center"
+     ]
+  },
+  {
+    "name": "Jhilmil Resort & Spa",
+    "BannerimageUrl": "https://i.ibb.co.com/3cXW08L/JhilmilB.jpg",
+    "imageUrl1": "https://i.ibb.co.com/fvj6JXx/Jhilmil1.jpg",
+    "imageUrl2": "https://i.ibb.co.com/vL2TQhm/Jhilmil2.jpg",
+    "rating": 4.4,
+    "price": "$180",
+    "location": {
+      "coordinates": [24.9075, 91.8603],
+      "description": "Srimangal"
+    },
+    "description": "Serene resort with stunning lake views, offering comfortable cottages, spa treatments, and boat rides.",
+    "amenities": [
+    "Comfortable cottages", 
+    "Spa treatments",
+    "Boat rides"
+  ]
+  },
+  {
+    "name": "Grand Sylhet Hotel & Resort",
+    "BannerimageUrl": "https://i.ibb.co/VmbyvYG/GrandSB.jpg",
+    "imageUrl1": "https://i.ibb.co/fndGj0P/GrandS1.webp",
+    "imageUrl2": "https://i.ibb.co/vcfZcyJ/GrandS2.jpg",
+    "rating": 4.3,
+    "price": "$100",
+    "location": {
+      "coordinates": [24.902, 91.8699],
+      "description": "Sylhet"
+    },
+    "description": "A luxurious resort with a spa, multiple dining options, and a beautiful garden.",
+    "amenities": [
+      "Spa",
+      "Multiple Dining Options",
+      "Beautiful Garden"
+    ]
+      },
+  {
+    "name": "Hotel Noorjahan Grand",
+    "BannerimageUrl": "https://i.ibb.co.com/WtyHn4H/Noorjahan-B.webp",
+    "imageUrl1": "https://i.ibb.co.com/k90CGG6/Noorjahan1.jpg",
+    "imageUrl2": "https://i.ibb.co.com/KVZHwsy/Noorjahan2.jpg",
+    "rating": 4.2,
+    "price": "$80",
+    "location": {
+      "coordinates": [24.902, 91.8699],
+      "description": "Sylhet"
+    },
+    "description": "A comfortable hotel with spacious rooms and a central location in Sylhet.",
+    "amenities": [
+      "Spatious Rooms", 
+    "Central Location"
+  ]
+  },
+  {
+
+    "name": "Hotel Seven Star Chittagong",
+    "description": "A centrally located hotel in Chittagong offering comfortable accommodations, modern amenities, and easy access to business and leisure destinations.",
+    "BannerimageUrl": "https://i.ibb.co.com/y6JHdvD/7StarB.jpg",
+    "imageUrl1": "https://i.ibb.co.com/p4BPZh7/7Star1.webp",
+    "imageUrl2": "https://i.ibb.co.com/jgwFj6R/7Star2.jpg",
+    "rating": 4,
+    "price": "$70",
+    "location": {
+      "coordinates": [22.3569, 91.8355],
+      "address": "Chittagong, Bangladesh"
+    },
+    "amenities": [
+      "Restaurant",
+      "Meeting Rooms",
+      "Business Center",
+      "Free Wi-Fi",
+      "Room Service"
+    ]
+  },
+  {
+    "name": "Nilachol Eco Park Resort",
+    "description": "Discover the serenity of Nilachol at this eco-friendly resort. Immerse yourself in the beauty of nature, enjoy delicious organic meals, and participate in eco-tourism activities. Nilachol Eco Park Resort offers a unique and unforgettable experience.",
+    "BannerimageUrl": "https://i.ibb.co.com/6bH7YK9/Nilachol-B.jpg",
+    "imageUrl1": "https://i.ibb.co.com/DYbtc9W/Nilachol1.jpg",
+    "imageUrl2": "https://i.ibb.co.com/Vtr0F7b/Nilachol2.jpg",
+    "rating": 4.5,
+    "price": "$80",
+    "location": {
+      "coordinates": [21.95, 92.1833],
+      "address": "Nilachol, Bandarban"
+    },
+    "amenities": [
+      "Eco-friendly Cottages",
+      "Organic Restaurant",
+      "Nature Trails",
+      "Bird Watching",
+      "Camping",
+      "Bonfire"
+    ]
+  },
+  {
+    "name": "Hotel Hill View",
+    "description": "Enjoy stunning views of the surrounding hills from Hotel Hill View in Rangamati. This comfortable hotel offers a cozy atmosphere, friendly service, and easy access to local attractions.",
+    "BannerimageUrl": "https://i.ibb.co.com/f0gG28x/Hill-View-B.jpg",
+    "imageUrl1": "https://i.ibb.co.com/SsSHPpd/Hill-View1.jpg",
+    "imageUrl2": "https://i.ibb.co.com/kKXrp0M/Hill-View2.jpg",
+    "rating": 4.2,
+    "price": "$60",
+    "location": {
+      "coordinates": [21.95, 92.1667],
+      "address": "Rangamati Town, Rangamati"
+    },
+    "amenities": [
+      "Restaurant",
+      "Free Wi-Fi",
+      "Room Service",
+      "City Views"
+    ]
+  },
+  {
+    "name": "Hotel Royal Rajshahi",
+    "description": "Experience a comfortable stay at Hotel Royal Rajshahi, centrally located in the heart of the city. This hotel offers modern amenities and easy access to local attractions and businesses.",
+    "BannerimageUrl": "https://i.ibb.co.com/khLhYzM/Royal-Rajshahi-B.jpg",
+    "imageUrl1": "https://i.ibb.co.com/Gt6dGqT/Royal-Rajshahi1.jpg",
+    "imageUrl2": "https://i.ibb.co.com/kHxq19x/84c68326.jpg",
+    "rating": 4,
+    "location": {
+      "coordinates": [24.3748, 88.6087],
+      "address": "Rajshahi City, Rajshahi"
+    },
+    "amenities": [
+      "Restaurant",
+      "Meeting Rooms",
+      "Free Wi-Fi",
+      "Room Service"
+    ],
+    "price": "$75"
+  },
+  {
+    "name": "The Cox Today",
+    "description": "Experience the vibrant atmosphere of Cox's Bazar at The Cox Today. This modern hotel offers stylish accommodations, a rooftop restaurant with stunning sea views, and easy access to the beach.",
+    "BannerimageUrl": "https://i.ibb.co.com/Wyp6VRb/CoxToday.jpg",
+    "imageUrl1": "https://i.ibb.co.com/4VGNLp3/Cox-Today1.jpg",
+    "imageUrl2": "https://i.ibb.co.com/VxLmNCf/Cox-Today2.jpg",
+    "rating": 4.3,
+    "price": "$100",
+    "location": {
+      "coordinates": [21.4225, 91.9744],
+      "address": "Cox's Bazar, Bangladesh"
+    },
+    "amenities": [
+      "Restaurant",
+      "Rooftop Terrace",
+      "Beach Access",
+      "Free Wi-Fi"
+    ]
+  },
+  {
+    "name": "Sundarbans Crocodile Park Resort",
+    "description": "Experience the unique beauty of the Sundarbans at this eco-friendly resort. Enjoy boat tours through the mangrove forests, spot wildlife, and learn about the unique ecosystem of this UNESCO World Heritage Site.",
+    "BannerimageUrl": "https://i.ibb.co.com/QbL6nHb/Crocodile-Resort-B.jpg",
+    "imageUrl1": "https://i.ibb.co.com/M9k2HfH/Crocodile-Resort1.webp",
+    "imageUrl2": "https://i.ibb.co.com/vV8PTc0/Crocodile-Resort2.jpg",
+    "rating": 4.4,
+    "price": "$120",
+    "location": {
+      "coordinates": [21.85, 89.85],
+      "address": "Sundarbans, Bangladesh"
+    },
+    "amenities": [
+      "Boat Tours",
+      "Nature Walks",
+      "Restaurant",
+      "Free Wi-Fi"
+    ]
+  },
+  {
+    "name": "Hotel Khan Palace",
+    "description": "Enjoy the tranquility of Kuakata at this charming lodge. Relax on the beach, watch the sunrise over the Bay of Bengal, and explore the nearby fishing villages. Kuakata Tourist Lodge offers a simple yet comfortable stay.",
+    "BannerimageUrl": "https://i.ibb.co.com/mNCxL72/khan-palace-B.jpg",
+    "imageUrl1": "https://i.ibb.co.com/n18f4d3/khan-palace1.jpg",
+    "imageUrl2": "https://i.ibb.co.com/6DW72qF/khan-palace2.jpg",
+    "rating": 4,
+    "price": "$50",
+    "location": {
+      "coordinates": [21.8194456231777, 90.1203312511406],
+      "address": "Kuakata, Bangladesh"
+    },
+    "amenities": [
+      "Restaurant",
+      "Beach Access",
+      "Free Wi-Fi"
+    ]
+  },
+  {
+    "name": "Jaldhaka Resort",
+    "description": "Escape to the serenity of Jaldhaka at this picturesque resort. Enjoy breathtaking views of the surrounding hills, relax by the river, and experience the tranquility of nature.",
+    "BannerimageUrl": "https://i.ibb.co.com/R9jYcz2/jaldhaka-B.jpg",
+    "imageUrl1": "https://i.ibb.co.com/gFQV238/jaldhaka1.jpg",
+    "imageUrl2": "https://i.ibb.co.com/SsqJNG1/jaldhaka2.jpg",
+    "rating": 4.5,
+    "price": "$90",
+    "location": {
+      "coordinates": [26.1667, 89.3833],
+      "address": "Jaldhaka, Nilphamari, Bangladesh"
+    },
+    "amenities": [
+      "Restaurant",
+      "River Views",
+      "Nature Walks",
+      "Free Wi-Fi"
+    ]
+  },
+  {
+    "name": "The Crystal Palace",
+    "description": "Experience luxury and elegance at The Crystal Palace, a premier hotel in Dhaka. This iconic hotel offers world-class amenities, exquisite dining, and unparalleled service.",
+    "BannerimageUrl": "https://i.ibb.co.com/Kh2N6BC/Crystal-Palace-B.jpg",
+    "imageUrl1": "https://i.ibb.co.com/njXNdyK/Crystal-Palace1.jpg",
+    "imageUrl2": "https://i.ibb.co.com/SmQ6nb1/Crystal-Palace2.jpg",
+    "rating": 4.5,
+    "price": "$200",
+    "location": {
+      "coordinates": [23.75, 90.4],
+      "address": "Dhaka, Bangladesh"
+    },
+    "amenities": [
+      "Spa",
+      "Fitness Center",
+      "Multiple Restaurants",
+      "Bar",
+      "Pool",
+      "Free Wi-Fi"
+    ]
+  },
+  {
+    "name": "Seagull Hotel & Resort",
+    "description": "Indulge in luxury at Seagull Hotel & Resort in Cox's Bazar. This beachfront resort offers stunning ocean views, world-class dining, and a range of recreational activities, including swimming, sunbathing, and water sports.",
+    "BannerimageUrl": "https://i.ibb.co.com/xCV9m4y/SeagullB.jpg",
+    "imageUrl1": "https://i.ibb.co.com/SPg1snC/Seagull1.webp",
+    "imageUrl2": "https://i.ibb.co.com/t3pfWNB/Seagull2.jpg",
+    "rating": 4.6,
+    "price": "$150",
+    "location": {
+      "coordinates": [21.4225, 91.9744],
+      "address": "Cox's Bazar, Bangladesh"
+    },
+    "amenities": [
+      "Beach Access",
+      "Spa",
+      "Multiple Restaurants",
+      "Pool",
+      "Water Sports",
+      "Free Wi-Fi"
+    ]
+  },
+  {
+    "name": "Nilgiri Resort & Spa",
+    "description": "Nestled amidst the lush greenery of Bandarban, Nilgiri Resort & Spa offers a tranquil escape from the hustle and bustle of city life. Enjoy breathtaking views of the surrounding hills, indulge in rejuvenating spa treatments, and experience the serenity of nature.",
+    "BannerimageUrl": "https://i.ibb.co.com/TKXTkSN/NilgiriB.jpg",
+    "imageUrl1": "https://i.ibb.co.com/TKXTkSN/NilgiriB.jpg",
+    "imageUrl2": "https://i.ibb.co.com/NLMHgpx/Nilgiri2.jpg",
+    "rating": 4.6,
+    "price": "$120",
+    "location": {
+      "coordinates": [21.9167, 92.2083],
+      "address": "Bandarban, Bangladesh"
+    },
+    "amenities": [
+      "Spa",
+      "Restaurant",
+      "Hiking Trails",
+      "Free Wi-Fi"
+    ]
+  },
+  {
+    "name": "InterContinental Dhaka",
+    "BannerimageUrl": "https://i.ibb.co.com/pztxp70/intercontinenta-B.jpg",
+    "imageUrl1": "https://i.ibb.co.com/bFjjcYT/intercontinenta1.jpg",
+    "imageUrl2": "https://i.ibb.co.com/r0vxCMt/intercontinental2.jpg",
+    "rating": 4.7,
+    "price": "$180",
+    "location": {
+      "coordinates": [23.799999, 90.400002],
+      "description": "Dhaka"
+    },
+    "description": "An upscale hotel featuring a gym, an outdoor infinity pool, a spa, plus dining & a cocktail lounge.",
+    "amenities": [
+      "Spa",
+      "Fitness Center",
+      "Multiple Restaurants & Bars",
+      "Pool",
+      "Business Center",
+      "Free Wi-Fi"
+    ]
+  },
+  {
+    "name": "Sajek Valley Resort",
+    "description": "Experience the magic of Sajek Valley at this charming resort. Surrounded by breathtaking scenery, Sajek Valley Resort offers cozy accommodations, delicious local cuisine, and opportunities for adventure, including trekking and nature walks.",
+    "BannerimageUrl": "https://i.ibb.co.com/SvsjG5T/SajekB.jpg",
+    "imageUrl1": "https://i.ibb.co.com/DpKzNGM/Sajek1.jpg",
+    "imageUrl2": "https://i.ibb.co.com/WBYKxN7/Sajek2.jpg",
+    "rating": 4.8,
+    "price": "$90",
+    "location": {
+      "coordinates": [23.0833, 92.2833],
+      "address": "Sajek Valley, Rangamati, Bangladesh"
+    },
+    "amenities": [
+      "Restaurant",
+      "Bonfire",
+      "Trekking",
+      "Free Wi-Fi"
+    ]
+  },
+  {
+    "name": "Grand Sultan Tea Resort & Golf",
+    "BannerimageUrl": "https://i.ibb.co.com/YdWHG8J/SultanB.webp",
+    "imageUrl1": "https://i.ibb.co.com/t3x0LZk/Sultan1.webp",
+    "imageUrl2": "https://i.ibb.co.com/Nn2fC6Z/Sultan2.jpg",
+    "rating": 4.8,
+    "price": "$250",
+    "location": {
+      "coordinates": [24.9075, 91.8603],
+      "description": "Srimangal"
+    },
+    "description": "Luxurious resort nestled amidst tea gardens, offering golf course, spa, and elegant accommodations.",
+    "amenities": [
+      "Golf Course",
+      "Spa",
+      "Multiple Pools",
+      "Restaurants",
+      "Fitness Center",
+      "Garden"
+    ]
+  },
+  {
+    "name": "Hotel Sea Palace Ltd.",
+    "BannerimageUrl": "https://i.ibb.co.com/rs42nxD/Sea-Palace-B.jpg",
+    "imageUrl1": "https://i.ibb.co.com/SXbMTpD/Sea-Palace1.jpg",
+    "imageUrl2": "https://i.ibb.co.com/txSCvP7/Sea-Palace2.jpg",
+    "price": "$100",
+    "rating": 4.8,
+    "location": {
+      "coordinates": [21.4333, 91.9833],
+      "description": "Cox's Bazar"
+    },
+    "description": "Family-friendly hotel with comfortable rooms, a restaurant, and a swimming pool.",
+    "amenities": [
+      "Helipad",
+      "Outdoor pool with a kids' zone",
+      " Poolside bar-b-q lounge",
+      " Bar",
+      "Conference rooms",
+      "Business center",
+      "Health club",
+      "Beauty salon",
+      "Billiards"
+    ]
+  }
+]
