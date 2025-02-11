@@ -10,8 +10,8 @@ const Students = () => {
             <div className="mb-5">
                 <h2 className="text-3xl justify-center items-center text-center mx-auto font-semibold text-transparent bg-clip-text bg-gradient-to-r from-red-900 to-green-900"> Meet Our Consumers </h2>
             </div>
-            <div className="flex flex-col gap-5 md:flex-row justify-between w-11/12 md:w-full lg:w-11/12 mx-auto">
-            <div className="card  bg-base-100 lg:w-1/3 shadow-xl">
+            <div className="flex flex-col gap-5 md:flex-row justify-between  w-11/12 md:w-full lg:w-11/12 mx-auto">
+            <div className="card bg-transparent backdrop-blur-3xl border-transparent shadow-2xl shadow-orange-300 bg-base-100 lg:w-1/3 ">
             <figure className="px-10 pt-10">
                 <img
                 src={Student1}
@@ -19,11 +19,11 @@ const Students = () => {
                 className="rounded-xl h-48" />
             </figure>
             <div className="card-body  items-start text-center">
-                <h2 className="card-title">Natsuki</h2>
+                <h2 className="card-title">Ryōta</h2>
                 <p className="text-left">I recently used [InnSight] to book a weekend getaway at a charming hotel in the countryside. The website was incredibly user-friendly. The booking process was seamless, and I received a confirmation email immediately. I would highly recommend [InnSight] to anyone looking for a hassle-free travel experience.</p>
             </div>
             </div>
-            <div className="card bg-base-100 lg:w-1/3 shadow-xl">
+            <div className="card bg-base-100 lg:w-1/3 bg-transparent backdrop-blur-3xl border-transparent shadow-2xl shadow-orange-300">
             <figure className="px-10 pt-10">
                 <img
                 src={Student2}
@@ -31,11 +31,11 @@ const Students = () => {
                 className="rounded-xl h-48" />
             </figure>
             <div className="card-body items-start text-center">
-                <h2 className="card-title">Ryōta</h2>
+                <h2 className="card-title">Natsuki</h2>
                 <p className="text-left">I&apos;ve used [InnSight] for years, and I&apos;ve always been impressed with their service. Their website is easy to navigate, and they have a wide selection of hotels to choose from. I would definitely recommend [InnSight] to anyone looking for a reliable and convenient way to book their travel.</p>
             </div>
             </div>
-            <div className="card bg-base-100 lg:w-1/3 shadow-xl">
+            <div className="card bg-base-100 lg:w-1/3 bg-transparent backdrop-blur-3xl border-transparent shadow-2xl shadow-orange-300">
             <figure className="px-10 pt-10">
                 <img
                 src={Student3}

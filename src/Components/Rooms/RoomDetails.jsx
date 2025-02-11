@@ -154,22 +154,7 @@ const RoomDetails = () => {
 
 
 
-        // useEffect(() => {
-        //   const fetchData = async () => {
-        //     try {
-        //       const response = await fetch(`https://inn-sight-server.vercel.app/RoomReviews/${_id}`);
-        //       const data = await response.json();
-        //       setReviews(data); 
-        //       setLoading2(false); 
-        //       //  (reviews.comment)// Set loading to false after data is fetched
-        //     } catch (error) {
-        //       console.error('Error fetching data:', error);
-        //       setLoading2(false); // Set loading to false even on error
-        //     }
-        //   },[_id];
-      
-        //   fetchData();
-        // });
+
         const location2 = useLocation();
         useEffect(() => {
           const fetchData = async () => {
@@ -217,7 +202,7 @@ const RoomDetails = () => {
                </Helmet>
                 <Navbar></Navbar>
                     <div className="w-11/12 md:h-3/5 lg:w-1/2 mt-10 mx-auto">
-                        <div className="card bg-base-100 w-full py-5 shadow-xl">
+                        <div className="card bg-base-100 w-full py-5 bg-transparent backdrop-blur-3xl border-transparent shadow-2xl shadow-orange-300">
                             <figure className="px-10 pt-10">
                             <div className="carousel rounded-box w-[500px]">
                             <div className="carousel-item w-full">
@@ -249,7 +234,7 @@ const RoomDetails = () => {
                                 <p><strong className="text-black font-mono font-extrabold text-xl">Rent:</strong> <span className="opacity-75 font-serif">{price}</span></p>
                                 <p><strong className="text-black font-mono font-extrabold text-xl">Location:</strong> <span className="opacity-75 font-serif">{location.description}</span></p>
 
-                                <ul className="grid grid-cols-2 md:grid-cols-3 mx-auto w-full gap-1 pl-4">
+                                <ul className="grid grid-cols-2 md:grid-cols-3 mx-auto w-full gap-1 pl-4 ">
                                 {amenitiesList.length > 0 ? (
                                     amenitiesList.map((amenity, index) => (
                                     <li className="btn " key={index}>{amenity}</li>
@@ -341,12 +326,14 @@ const RoomDetails = () => {
 
                         {
                           showreviews && (
-                            <input type="submit" value="Close Reviews" className="btn  btn-primary flex  justify-center bottom-0" onClick={handleCloseReview}  />
+                            <input type="submit" value="Close Reviews" className="btn  btn-primary flex  justify-center bottom-0 bg-transparent backdrop-blur-3xl  shadow-md border-transparent 
+                            shadow-red-600" onClick={handleCloseReview}  />
                           )
                         }
                         {
                           !showreviews && (
-                            <input type="submit" value="Show Reviews" className="btn  btn-primary flex  justify-center bottom-0" onClick={handleShowReview}  />
+                            <input type="submit" value="Show Reviews" className="btn  btn-primary flex  justify-center bottom-0 bg-transparent backdrop-blur-3xl  shadow-md
+                            border-transparent shadow-green-600" onClick={handleShowReview}  />
                           )
                         }
 

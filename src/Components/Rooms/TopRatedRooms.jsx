@@ -18,7 +18,7 @@ const TopRatedRooms = () => {
   
   
             <Link key={room._id} to={`/room-details/${room._id}`}>
-                <div key={room._id} className="card bg-base-200 h-full  shadow-xl">
+                <div key={room._id} className="card bg-base-200 h-full  bg-transparent backdrop-blur-3xl border-transparent shadow-2xl shadow-orange-300">
             <figure className="px-10 pt-10">
               <img
                 src={room.BannerimageUrl}
@@ -27,7 +27,7 @@ const TopRatedRooms = () => {
             </figure>
             <div className="card-body">
             <h2 className="card-title  font-mono font-extrabold text-white text-2xl">{room.name}</h2>
-                <p><strong className="text-black font-mono font-extrabold text-xl">Room Description:</strong> <span className="opacity-75 font-serif">{room.description}</span></p>
+                <p><strong className="text-black font-mono font-extrabold text-xl">Room Description:</strong> <span className="opacity-75  font-serif">{room.description}</span></p>
                 <p><strong className="text-black font-mono font-extrabold text-xl">Rating:</strong> <span className="opacity-75 font-serif">{room.rating}</span></p>
                 <p><strong className="text-black font-mono font-extrabold text-xl">Rent:</strong> <span className="opacity-75 font-serif">{room.price}</span></p>
   
@@ -36,7 +36,7 @@ const TopRatedRooms = () => {
   </Link>
           ))}
         </div>
-        <NavLink to={"/rooms"} className="btn w-full mt-5">See All Rooms</NavLink>
+        <NavLink to={"/rooms"} className="btn hover:bg-transparent hover:backdrop-blur-3xl hover:border-transparent hover:shadow-2xl hover:shadow-orange-300 hover:text-white w-full mt-5">See All Rooms</NavLink>
       </section>
     );
 };

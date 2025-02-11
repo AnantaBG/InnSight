@@ -9,7 +9,7 @@ const Companies = () => {
                 <h2 className="text-3xl justify-center items-center text-center mx-auto font-semibold text-transparent bg-clip-text bg-gradient-to-r from-yellow-900 to-green-500"> Meet Our Direct Partners </h2>
             </div>
             <div className="flex gap-5 flex-col md:flex-row justify-between w-11/12 mx-auto">
-            <div className="card bg-base-100 md:w-96 shadow-xl">
+            <div className="card  bg-base-100 lg:w-1/3 bg-transparent backdrop-blur-3xl border-transparent shadow-2xl shadow-orange-300">
             <figure className="px-10 pt-10">
                 <img
                 src={teacher1}
@@ -30,7 +30,7 @@ const Companies = () => {
                 </p>
             </div>
             </div>
-            <div className="card  bg-base-100 md:w-96 h-1/2 shadow-xl">
+            <div className="card  bg-base-100 lg:w-1/3 bg-transparent backdrop-blur-3xl border-transparent shadow-2xl shadow-orange-300">
             <figure className="px-10 pt-10">
                 <img
                 src={teacher2}
@@ -49,7 +49,7 @@ const Companies = () => {
 
             </div>
             </div>
-            <div className="card bg-base-100 md:w-96 shadow-xl">
+            <div className="card  bg-base-100 lg:w-1/3 bg-transparent backdrop-blur-3xl border-transparent shadow-2xl shadow-orange-300">
             <figure className="px-10 pt-10">
                 <img
                 src={teacher3}
