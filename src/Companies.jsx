@@ -17,11 +17,17 @@ const Companies = () => {
                 className="rounded-xl" />
             </figure>
             <div className="card-body items-start text-center">
-                <h2 className="card-title">Visa Pod</h2>
-                <p className="text-left">The Bangladesh Online MRV Portal is a website where you can apply for a visa to Bangladesh online.</p>
-                <div className="card-actions">
-                <button className="btn btn-primary">Contact</button>
-                </div>
+                <h2 className="card-title">Globetrotter Getaways Inc.</h2>
+                <p className="text-left">
+
+                Slogan: Your Passport to Amazing Deals!
+                Founded: 1992
+                HQ: Sunnyvale, CA
+                Focus: Luxury, all-inclusive, adventure
+                Unique: Globetrotter Guarantee, 24/7 support, Secret Deals, travel advisors
+                Stats: 10M+ customers, 5-star reviews, 10K+ partners.
+
+                </p>
             </div>
             </div>
             <div className="card  bg-base-100 md:w-96 h-1/2 shadow-xl">
@@ -32,11 +38,15 @@ const Companies = () => {
                 className="rounded-xl" />
             </figure>
             <div className="card-body items-start text-center">
-                <h2 className="card-title">Visa 360</h2>
-                <p className="text-left">Visa360 is a leading provider of visa services. We provide comprehensive visa services for travelers from all over the world.Australian permanent resident or eligible New Zealand citizen live in .</p>
-                <div className="card-actions">
-                <button className="btn btn-primary">Contact</button>
-                </div>
+                <h2 className="card-title text-left">Guest-Centric Technology Solutions</h2>
+                <p className="text-left">
+                GuestConnect: Smart room control, mobile app, personalized recommendations
+                Culinary Adventures: VR experiences
+                Wellness Oasis: Fitness trackers, in-room amenities
+                Language Immersion: Language app access, in-room resources, language exchange
+                Sustainable Travel: Carbon offsetting, eco-friendly info, sustainable practices
+                </p>
+
             </div>
             </div>
             <div className="card bg-base-100 md:w-96 shadow-xl">
@@ -47,11 +57,15 @@ const Companies = () => {
                 className="rounded-xl" />
             </figure>
             <div className="card-body items-start text-center">
-                <h2 className="card-title ">Partner Visa</h2>
-                <p className="text-left"> This visa lets the de facto partner or spouse of an Australian citizen, Australian permanent resident or eligible New Zealand citizen live in .</p>
-                <div className="card-actions">
-                <button className="btn btn-primary">Contact</button>
-                </div>
+                <h2 className="card-title text-left">Strategic Community Alliances</h2>
+                <p className="text-left"> 
+                Pawsome Staycation: Pets welcome, store discounts, dog park access
+                Art & Appetite: Art tour, cooking class, gourmet dinner
+                Family Fun: Amusement park, museum, kids activities
+                Romantic Getaway: Wine tasting, massage, romantic dinner
+                Eco-Adventure: Nature walks, rentals, eco-friendly amenities
+                </p>
+
             </div>
             </div>
             </div>

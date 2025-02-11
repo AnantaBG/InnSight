@@ -6,7 +6,7 @@ const ReviewForm = ({roomName, roomId, onSubmit, onClose }) => {
   const [rating, setRating] = useState(0);
   const [comment, setComment] = useState('');
         const { user} = useContext(AuthC);
-  console.log(roomName)
+   (roomName)
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -14,7 +14,7 @@ const ReviewForm = ({roomName, roomId, onSubmit, onClose }) => {
         username: user.displayName,
         rating,
         comment,
-        _id: roomId ,
+        id: roomId ,
         timestamp: new Date().toDateString(),
         roomName
       };
@@ -25,8 +25,8 @@ const ReviewForm = ({roomName, roomId, onSubmit, onClose }) => {
 
   return (
     <div className="p-4">
-      <h2 className="text-lg font-semibold mb-4">Leave a Review</h2>
-      <div className="mb-4">
+      <h2 className="mb-4 text-2xl">Leave a Review</h2>
+      <div className=" mb-4">
         {/* Add your rating component here (e.g., stars) */}
         <label htmlFor="rating">Rating:</label>
         <select 
@@ -34,7 +34,9 @@ const ReviewForm = ({roomName, roomId, onSubmit, onClose }) => {
           value={rating} 
           onChange={(e) => setRating(Number(e.target.value))}
           required 
+          
         >
+          <option value="1">0</option>
           <option value="1">1</option>
           <option value="2">2</option>
           <option value="3">3</option>
@@ -43,7 +45,7 @@ const ReviewForm = ({roomName, roomId, onSubmit, onClose }) => {
         </select>
       </div>
       <div className="mb-4">
-        <label htmlFor="comment">Comment:</label>
+        <label htmlFor="comment">Your thoughts:</label>
         <textarea 
           id="comment" 
           value={comment} 

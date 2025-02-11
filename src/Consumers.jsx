@@ -10,41 +10,41 @@ const Students = () => {
             <div className="mb-5">
                 <h2 className="text-3xl justify-center items-center text-center mx-auto font-semibold text-transparent bg-clip-text bg-gradient-to-r from-red-900 to-green-900"> Meet Our Consumers </h2>
             </div>
-            <div className="flex flex-col gap-5 md:flex-row justify-between w-11/12 mx-auto">
-            <div className="card  bg-base-100  shadow-xl">
+            <div className="flex flex-col gap-5 md:flex-row justify-between w-11/12 md:w-full lg:w-11/12 mx-auto">
+            <div className="card  bg-base-100 lg:w-1/3 shadow-xl">
             <figure className="px-10 pt-10">
                 <img
                 src={Student1}
                 alt="Natsuki"
-                className="rounded-xl" />
+                className="rounded-xl h-48" />
             </figure>
-            <div className="card-body items-start text-center">
+            <div className="card-body  items-start text-center">
                 <h2 className="card-title">Natsuki</h2>
-                <p className="text-left">This is a service provider of their word. I am so happy when it comes to timeliness. I would like to recommend that if you need a flight reservation then this is the service provider to approach without any doubt.</p>
+                <p className="text-left">I recently used [InnSight] to book a weekend getaway at a charming hotel in the countryside. The website was incredibly user-friendly. The booking process was seamless, and I received a confirmation email immediately. I would highly recommend [InnSight] to anyone looking for a hassle-free travel experience.</p>
             </div>
             </div>
-            <div className="card bg-base-100  h-1/2 shadow-xl">
+            <div className="card bg-base-100 lg:w-1/3 shadow-xl">
             <figure className="px-10 pt-10">
                 <img
                 src={Student2}
                 alt="Ryōta"
-                className="rounded-xl" />
+                className="rounded-xl h-48" />
             </figure>
             <div className="card-body items-start text-center">
                 <h2 className="card-title">Ryōta</h2>
-                <p className="text-left">My main concern is about whether after care support is good or not. So once I got chance to contact the support and it was mind blowing service that they resolved my issue of booking cancellation without any excuses. So that’s what I want from online sites.</p>
+                <p className="text-left">I&apos;ve used [InnSight] for years, and I&apos;ve always been impressed with their service. Their website is easy to navigate, and they have a wide selection of hotels to choose from. I would definitely recommend [InnSight] to anyone looking for a reliable and convenient way to book their travel.</p>
             </div>
             </div>
-            <div className="card bg-base-100 shadow-xl">
+            <div className="card bg-base-100 lg:w-1/3 shadow-xl">
             <figure className="px-10 pt-10">
                 <img
                 src={Student3}
                 alt="Ken"
-                className="rounded-xl" />
+                className="rounded-xl h-48" />
             </figure>
             <div className="card-body items-start text-center">
                 <h2 className="card-title ">Ken</h2>
-                <p className="text-left">Main thing about this site is their services and customer support. When I have problem with cancellation or changing the booking there never had any excuse and resolved my issue without creating any hurdle.</p>
+                <p className="text-left">I was planning a surprise trip for my partner, and I wanted to find a unique and romantic hotel. [InnSight] had a huge selection of hotels to choose from, including boutique hotels, luxury resorts, and even treehouses!I received a confirmation email immediately.</p>
             </div>
             </div>
             </div>

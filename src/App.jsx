@@ -4,11 +4,18 @@ import Navbar from "./Components/Navbar"
 import Reactmaps from "./Components/Reactmaps"
 import TopRatedRooms from "./Components/Rooms/TopRatedRooms"
 import Footer from "./Components/Footer"
-import ReviewForm from "./Components/ReviewSystem/ReviewForm"
+import Companies from "./Companies"
+import Students from "./Consumers"
+import { useContext } from "react"
+import { AuthC } from "./Provider/AuthProviderx"
+import Loading from "./Components/Loading"
 
 
 function App() {
-
+  const {loading} = useContext(AuthC);
+  if (loading) {
+      return <Loading></Loading>
+  }
   return (
     <>
     <Helmet>
@@ -18,7 +25,8 @@ function App() {
       <Banner/>
       <TopRatedRooms/>
       <Reactmaps/>
-      <ReviewForm/>
+      <Companies/>
+      <Students/>
       <Footer/>
     </>
   )

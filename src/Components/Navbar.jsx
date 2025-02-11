@@ -1,10 +1,11 @@
 import { useContext } from "react";
 import { NavLink } from "react-router-dom";
 import { AuthC } from "../Provider/AuthProviderx";
+import logo from '../assets/logo-removebg-preview.png'
 
 const Navbar = () => {
     const {user, logOut} = useContext(AuthC);
-    // console.log(user)
+    //  (user)
 
     return (
         <div>
@@ -28,13 +29,13 @@ const Navbar = () => {
                     <div
                         tabIndex={0}
                         className="menu menu-sm dropdown-content bg-gray-400 rounded-box z-[1] mt-3 w-52 p-2 shadow-2xl">
-                        <img src="/src/assets/logo-removebg-preview.png" alt="" />
+                        <img src={logo} alt="" />
                     <ul className="flex flex-col gap-y-5  justify-center mx-auto mt-10 mb-3">
 
                     <NavLink to="/"> <li className="btn  w-full ">Home</li></NavLink>
                     <NavLink to="/rooms"> <li className="btn  w-full ">Rooms</li></NavLink>
 
-                    {
+            {
                 user && user?.email ?
                 <div onClick={logOut}><li className="btn w-full">LogOut</li></div>
                 : <NavLink to="/login"><li className="btn w-full">Login</li></NavLink>
@@ -48,7 +49,7 @@ const Navbar = () => {
 
                     </div>
                     </div>
-                    <img className="invisible  lg:visible h-20" src="/src/assets/logo-removebg-preview.png" alt="" />
+                    <img className="invisible  lg:visible h-20" src={logo} />
                 </div>
                 <div className="navbar-center hidden lg:flex">
                     <ul className="menu menu-horizontal px-1 gap-x-2 text-2xl">

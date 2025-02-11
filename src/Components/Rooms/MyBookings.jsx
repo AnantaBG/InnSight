@@ -1,15 +1,14 @@
+/* eslint-disable no-unused-vars */
 import Navbar from "../Navbar";
 import { NavLink, useLoaderData } from "react-router-dom";
 import { useContext, useEffect, useState } from "react";
 import Swal from "sweetalert2";
-import { Slide } from "react-awesome-reveal";
 import { AuthC } from "../../Provider/AuthProviderx";
 import Loading from "../Loading";
 import DatePicker from "react-datepicker";
 import { Helmet } from "react-helmet";
 import Footer from "../Footer";
 import modalimage from '../../assets/4.png'
-// import ReviewCard from "../ReviewSystem/ReviewCard";
 import ReviewForm from "../ReviewSystem/ReviewForm";
 
 
@@ -76,7 +75,7 @@ const MyBookings = () => {
         });
                 if (response.ok) { 
                   const data = await response.json();
-                  console.log(data)
+                   (data)
                   Swal.fire({
                     icon: 'success',
                     title: 'Congrats!',
@@ -105,8 +104,7 @@ Swal.fire({
 
 
     const handleUpdate = _id => {
-        setSelectedRoom(_id);
-        // setCurrentID(selectedRoom[0]._id)
+        setSelectedRoom(filteredRooms[0]._id);
         setIsModalOpen(true);
 
       };
@@ -117,23 +115,21 @@ Swal.fire({
         ev.preventDefault();
         const form = ev.target;
         const date = form.date.value;
-        const _id = selectedRoom[0]._id; 
-        console.log(_id) 
+        const _id = selectedRoom
 
-        const updatedRoomData = {_id, date}
-       
+        const updatedRoomDate = {_id, date}
             try {
-                const response = await fetch(`http://localhost:5000/BookedRooms/${_id}`, {
+                const response = await fetch(`https://inn-sight-server.vercel.app/BookedRooms/${_id}`, {
                   method: 'PUT',
                   headers: {
                     'content-type': 'application/json',
                   },
-                  body: JSON.stringify(updatedRoomData),
+                  body: JSON.stringify(updatedRoomDate),
                 });
           
                 if (response.ok) { 
                   const data = await response.json();
-                  console.log(data)
+                   (data)
                     Swal.fire({
                       icon: 'success',
                       title: 'Congratualtions!',
@@ -141,7 +137,9 @@ Swal.fire({
                     });
                     const newDate = rooms.filter(room => room._id !== _id)
                     setCurrentDate(newDate);
-                          setIsModalOpen(false);
+                    
+                    setIsModalOpen(false);
+
 
                 }
                 else {
@@ -283,18 +281,6 @@ Swal.fire({
         </div>
       )}
         
-        <Slide>
-          <div className="text-2xl md:text-3xl mt-10 font-bold flex justify-center mx-auto">
-                        {/* Existing Reviews */}
-    {/* {roomReviews && roomReviews.length > 0 ? (
-      roomReviews.map((review) => (
-        <ReviewCard key={review._id} review={review} />
-      ))
-    ) : (
-      <span>No reviews yet.</span>
-    )} */}
-          </div>
-        </Slide>
 
 
 

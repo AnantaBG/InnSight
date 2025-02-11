@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import { useContext, useEffect, useState } from "react";
 import Swal from "sweetalert2";
 import { AuthC } from "../../Provider/AuthProviderx";
@@ -9,6 +10,7 @@ import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import { Helmet } from "react-helmet";
 import Footer from "../Footer";
+import { FaTruckRampBox } from "react-icons/fa6";
 // import ReviewCard from "../ReviewSystem/ReviewCard";
 
 const RoomDetails = () => {
@@ -19,16 +21,23 @@ const RoomDetails = () => {
     const room = useLoaderData();
     const [currentDate, setCurrentDate] = useState(null);
     const [reviews, setReviews] = useState([]);
+    const [showreviews, setShowReviews] = useState(false);
+
     // const [loading2, setLoading2] = useState(true);
 
-
+  const handleShowReview = () =>{
+    setShowReviews(true)
+  }
+  const handleCloseReview = () =>{
+    setShowReviews(false)
+  }
     
 
 
 
     const handleBookNow = (room) => {
         setSelectedRoom(room);
-        console.log(room._id)
+         (room._id)
         checkRoomAvailability(room._id, user.email) // Pass user email
           .then((available) => {
             setIsRoomAvailable(available);
@@ -38,7 +47,7 @@ const RoomDetails = () => {
             //   Display appropriate message based on availability and booking status
 
                
-                console.log("Room unavailable (general)");
+                 ("Room unavailable (general)");
                 Swal.fire({
                   icon: 'error',
                   title: 'Room Unavailable',
@@ -88,10 +97,10 @@ const RoomDetails = () => {
                   },
                   body: JSON.stringify(AppliedRoom),
                 });
-          console.log(response)
+           (response)
                 if (response.ok) { 
                   const data = await response.json();
-                  console.log(data)
+                   (data)
                     Swal.fire({
                       icon: 'success',
                       title: 'Congratualtions!',
@@ -112,26 +121,27 @@ const RoomDetails = () => {
                 console.error("Error booking room:", error);
                 Swal.fire({
                   icon: 'error',
-                  title: 'You have Booked',
+                  title: 'You have Already Booked',
                   text: 'Cannot book again',
                 });
+                setIsModalOpen(false)
               }
             };
 
 
         const checkRoomAvailability = async (roomId) => {
-          console.log(roomId)
+           (roomId)
             try {
-              const response = await fetch(`http://localhost:5000/checkAvailability/${roomId}`);
-              console.log(response)
+              const response = await fetch(`https://inn-sight-server.vercel.app/checkAvailability/${roomId}`);
+               (response)
               const data = await response.json();
-                console.log(data)
+                 (data)
                 if (user.email !== data.email) {
-                  console.log(data.email)
+                   (data.email)
                   return true;
                    // Room is available and user can book
                 } else if (user.email === data.email) {
-                  console.log(data.email)
+                   (data.email)
                   return false;
                 }
               } 
@@ -147,11 +157,11 @@ const RoomDetails = () => {
         // useEffect(() => {
         //   const fetchData = async () => {
         //     try {
-        //       const response = await fetch(`http://localhost:5000/RoomReviews/${_id}`);
+        //       const response = await fetch(`https://inn-sight-server.vercel.app/RoomReviews/${_id}`);
         //       const data = await response.json();
         //       setReviews(data); 
         //       setLoading2(false); 
-        //       // console.log(reviews.comment)// Set loading to false after data is fetched
+        //       //  (reviews.comment)// Set loading to false after data is fetched
         //     } catch (error) {
         //       console.error('Error fetching data:', error);
         //       setLoading2(false); // Set loading to false even on error
@@ -164,7 +174,7 @@ const RoomDetails = () => {
         useEffect(() => {
           const fetchData = async () => {
             try {
-              const response = await fetch(`http://localhost:5000/RoomReviews/${_id}`);
+              const response = await fetch(`https://inn-sight-server.vercel.app/RoomReviews/`);
               const data = await response.json();
               setReviews(data);
               // setLoading2(false);
@@ -176,8 +186,10 @@ const RoomDetails = () => {
       
           fetchData();
         }, [_id]);
-        // console.log(reviews.username)
-
+        //  (reviews.username)
+        const filteredReviews = reviews.filter(({  id }) =>
+           id ===_id
+        );
         const getAmenitiesArray = (amenitiesData) => {
             if (Array.isArray(amenitiesData)) {
               return amenitiesData; // Already an array, return directly
@@ -280,7 +292,7 @@ const RoomDetails = () => {
                             </div>
                         </div>
                         {isModalOpen && (
-                <div className="fixed justify-center mx-auto top-32 right-0 left-0 bottom-32 rounded-xl w-[300px] md:w-[400px] lg:w-[500px] h-auto  flex flex-col text-center " style={{ 
+                <div className="fixed justify-center mx-auto top-32 right-0 left-0 bottom-32 rounded-xl w-[300px] md:w-[400px] lg:w-[500px] bg-current h-auto  flex flex-col text-center " style={{ 
                     backgroundImage: `url(${modalimage})`
                     
                   }}>
@@ -316,21 +328,54 @@ const RoomDetails = () => {
                         
                     </form>
                     <input type="submit" value="Close" className="btn  btn-primary flex  justify-center bottom-0" onClick={handleCloseModal}  /> 
+                    
+                    
                     </div>
+                    
     
                 </div>
                         )}
+                        <div className=" flex justify-center mx-auto mt-10">
+
+
+
+                        {
+                          showreviews && (
+                            <input type="submit" value="Close Reviews" className="btn  btn-primary flex  justify-center bottom-0" onClick={handleCloseReview}  />
+                          )
+                        }
+                        {
+                          !showreviews && (
+                            <input type="submit" value="Show Reviews" className="btn  btn-primary flex  justify-center bottom-0" onClick={handleShowReview}  />
+                          )
+                        }
+
+                        </div>
+
+                         
+                        
+
                     </div>
+                    
+                    { showreviews && (
+        filteredReviews.length > 0?  (
+          filteredReviews.map(({ username, roomName, _id, comment, timestamp, rating }) => (
+            <div key={_id} className="card bg-primary text-primary-content mt-10 w-11/12 mt-29 mx-auto">
+            <div className="card-body">
+                  <h2 className="card-title text-white opacity-70 text-sm">{username} has a review for {roomName}<br /> With a Rating of {rating} star</h2>
+                  <p className="text-xl font-mono ">{comment}</p>
+                  <div className="card-actions text-white justify-end">
+            <h2>{timestamp}</h2>
+                    </div>
+                </div>
+              </div>
+          ))
+        ) : (
+          <p className="text-3xl  w-11/12 mx-auto flex justify-center mt-10 font-mono font-bold">No reviews found.</p>
+        )
+      )}
 
-      {/* <div>
 
-        <div>
-          <h2>{reviews.username}</h2>
-          <h2>{reviews.comment}</h2>
-          <h2>{reviews.id}</h2>
-        </div>
-        
-        </div> */}
                     <Footer></Footer>
             </div>
     );
