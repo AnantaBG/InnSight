@@ -18,7 +18,7 @@ const TopRatedRooms = () => {
   
   
             <Link key={room._id} to={`/room-details/${room._id}`}>
-                <div key={room._id} className="card bg-base-200 h-full  bg-transparent backdrop-blur-3xl border-transparent shadow-2xl shadow-orange-300">
+                <div key={room._id} className="card bg-base-200 h-full  backdrop-blur-3xl border-transparent shadow-2xl  bg-transparent dark:bg-[#1f1f38] shadow-orange-800 dark:shadow-indigo-800">
             <figure className="px-10 pt-10">
               <img
                 src={room.BannerimageUrl}

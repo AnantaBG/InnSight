@@ -56,7 +56,7 @@ const Navbar = () => {
                                     ''
                                 )}
                                 
-                                <NavLink to="/rooms"> <li className="btn w-full ">Contact Us</li></NavLink>
+                                <NavLink to="/contact"> <li className="btn w-full ">Contact Us</li></NavLink>
                                 {/* Theme Toggle (Mobile) */}
                                 <li className="btn rounded-full p-0" onClick={toggleTheme}>
                                 {theme === 'light' ? <div className="text-2xl">
@@ -89,7 +89,7 @@ const Navbar = () => {
                                 ) : (
                                     ''
                                 )}
-                        <NavLink to="/rooms"> <li className="btn w-full ">Contact Us</li></NavLink>
+                        <NavLink to="/contact"> <li className="btn w-full ">Contact Us</li></NavLink>
                         {/* Theme Toggle (Desktop) */}
                         <li className="btn rounded-full p-0" onClick={toggleTheme}>
                             {theme === 'light' ? <div className="text-2xl">

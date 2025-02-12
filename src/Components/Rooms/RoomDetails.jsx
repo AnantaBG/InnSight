@@ -4,16 +4,23 @@ import Swal from "sweetalert2";
 import { AuthC } from "../../Provider/AuthProviderx";
 import {NavLink, useLoaderData, useLocation } from "react-router-dom";
 import Loading from "../Loading";
-import Navbar from "../Navbar";
 import modalimage from '../../assets/4.png'
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import { Helmet } from "react-helmet";
 import Footer from "../Footer";
-import { FaTruckRampBox } from "react-icons/fa6";
-// import ReviewCard from "../ReviewSystem/ReviewCard";
-
+import { ThemeContext } from "../ThemeContext";
+import img1 from '../../assets/1.png'
+import img2 from '../../assets/2.png'
+import { BiHome } from "react-icons/bi";
 const RoomDetails = () => {
+      const { theme } = useContext(ThemeContext);
+
+
+    const getBackgroundImage = () => {
+      return theme === 'light' ? img2 : img1;
+  };
+    
     const {user, loading} = useContext(AuthC);
     const [isModalOpen, setIsModalOpen] = useState(false);
     const [selectedRoom, setSelectedRoom] = useState(null);
@@ -196,13 +203,18 @@ const RoomDetails = () => {
           return <Loading></Loading>;
         }
         return (
-            <div className="mb-10">
+            <div   className={` ${theme === 'dark' ? 'dark' : ''} min-h-screen`}
+            style={{
+              backgroundImage: `url(${getBackgroundImage()})`,
+              backgroundSize: 'bg-fixed',
+              backgroundRepeat: 'no-repeat',
+              transition: 'background-image 0.3s ease'
+            }}>
                 <Helmet>
                 <title>{name} Details</title>
                </Helmet>
-                <Navbar></Navbar>
-                    <div className="w-11/12 md:h-3/5 lg:w-1/2 mt-10 mx-auto">
-                        <div className="card w-full py-5 bg-transparent backdrop-blur-3xl border-transparent shadow-2xl shadow-orange-300">
+                    <div className="w-11/12 md:h-3/5  lg:w-1/2 mt-20 mx-auto">
+                        <div className="card w-full py-5 bg-transparent backdrop-blur-3xl border-transparent shadow-2xl dark:bg-[#1f1f38] shadow-orange-800 dark:shadow-indigo-800">
                             <figure className="px-10 pt-10">
                             <div className="carousel rounded-box w-[500px]">
                             <div className="carousel-item w-full">
@@ -228,16 +240,16 @@ const RoomDetails = () => {
 
     
                             <div className="card-body items-start p-10">
-                            <h2 className="card-title  font-mono font-extrabold text-white text-2xl">{name}</h2>
-                                <p><strong className="text-black font-mono font-extrabold text-xl">Room Description:</strong> <span className="opacity-75 font-serif">{description}</span></p>
-                                <p><strong className="text-black font-mono font-extrabold text-xl">Rating:</strong> <span className="opacity-75 font-serif">{rating}</span></p>
-                                <p><strong className="text-black font-mono font-extrabold text-xl">Rent:</strong> <span className="opacity-75 font-serif">{price}</span></p>
-                                <p><strong className="text-black font-mono font-extrabold text-xl">Location:</strong> <span className="opacity-75 font-serif">{location.description}</span></p>
+                            <h2 className="card-title dark:text-[#a2d5fd] font-mono font-extrabold text-white text-2xl">{name}</h2>
+                                <p><strong className="text-black font-mono font-extrabold dark:text-[#a2d5fd] text-xl">Room Description:</strong> <span className="opacity-75 font-serif">{description}</span></p>
+                                <p><strong className="text-black font-mono dark:text-[#a2d5fd] font-extrabold text-xl">Rating:</strong> <span className="opacity-75 font-serif">{rating}</span></p>
+                                <p><strong  className="text-black font-mono dark:text-[#a2d5fd] font-extrabold text-xl">Rent:</strong> <span className="opacity-75 font-serif">{price}</span></p>
+                                <p><strong className="text-black font-mono dark:text-[#a2d5fd] font-extrabold text-xl">Location:</strong> <span className="opacity-75 font-serif">{location.description}</span></p>
 
                                 <ul className="grid grid-cols-2 md:grid-cols-3 mx-auto w-full gap-1 pl-4 ">
-                                {amenitiesList.length > 0 ? (
-                                    amenitiesList.map((amenity, index) => (
-                                    <li className="btn " key={index}>{amenity}</li>
+                                {amenitiesList?.length > 0 ? (
+                                    amenitiesList?.map((amenity, index) => (
+                                    <li className="btn hover:brightness-75 border-transparent " key={index}>{amenity}</li>
                                     ))
                                 ) : (
                                     <li>No amenities available</li>
@@ -253,7 +265,8 @@ const RoomDetails = () => {
                                 <button
                                 disabled={!isRoomAvailable} // Disable button if room is unavailable
                                 onClick={() => handleBookNow(room)}
-                                className={`btn w-full mt-10 bg-blue-300 ${
+                                className={`btn  btn-primary flex  justify-center bottom-0 bg-transparent backdrop-blur-3xl  shadow-md
+                             w-full mt-10 ${
                                     !isRoomAvailable ? "opacity-50 cursor-not-allowed" : ""
                                 }`}
                                 >
@@ -266,7 +279,7 @@ const RoomDetails = () => {
 
                                 }
                                 { !user && (
-                                   <NavLink state={location2.pathname} to={"/login"}> <button className="btn mt-5 w-full bg-blue-300">Login to Book now</button>
+                                   <NavLink state={location2.pathname} to={"/login"}> <button className="mt-5 w-full btn  btn-primary flex  justify-center bottom-0 bg-transparent backdrop-blur-3xl  shadow-md">Login to Book now</button>
                                    </NavLink>
                                     
                                 )
@@ -336,10 +349,13 @@ const RoomDetails = () => {
                             border-transparent shadow-green-600" onClick={handleShowReview}  />
                           )
                         }
+                                        
+
 
                         </div>
 
-                         
+                        <a href="/" className=" btn  btn-primary flex  justify-center bottom-0 bg-transparent backdrop-blur-3xl  shadow-md
+                         border-transparent hover:border-transparent hover:shadow-white mt-12 text-4xl  top-0"><BiHome/>Go Home</a>
                         
 
                     </div>

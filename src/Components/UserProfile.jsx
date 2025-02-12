@@ -15,7 +15,7 @@ const UserProfile = () => {
                 <title>Your Profile</title>
       </Helmet>
       <Navbar></Navbar>
-      <div className="card md:w-1/2 w-11/12 bg-base-200 mx-auto  bg-transparent backdrop-blur-3xl border-transparent shadow-2xl shadow-orange-300 ">
+      <div className="card md:w-1/2 w-11/12 bg-base-200 mx-auto  bg-transparent backdrop-blur-3xl border-transparent dark:bg-[#1f1f38] shadow-orange-800 dark:shadow-indigo-800 shadow-2xl ">
   
       <div className="flex flex-col items-center pb-10">
       <figure className="px-10 pt-10">

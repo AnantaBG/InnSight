@@ -6,8 +6,18 @@ import Loading from "../Loading";
 import { Slide } from "react-awesome-reveal";
 import { Helmet } from "react-helmet";
 import Footer from "../Footer";
+import { ThemeContext } from "../ThemeContext";
 
 const Rooms = () => {
+    const { theme } = useContext(ThemeContext);
+  
+    useEffect(() => {
+        document.body.classList.add('bg-fixed'); // Add bg-fixed class to body
+        document.body.classList.toggle('dark', theme === 'dark'); // Toggle the dark class
+        return () => {
+            document.body.classList.remove('bg-fixed'); // Remove on unmount (important!)
+        };
+    });
     const allRooms = useLoaderData();
     const { loading } = useContext(AuthC);
     const [filteredRooms, setFilteredRooms] = useState(allRooms); // State for filtered rooms
@@ -71,7 +81,7 @@ const Rooms = () => {
                         <Link key={Room._id} to={`/room-details/${Room._id}`}>
                             <div
                                 key={Room._id}
-                                className="card bg-base-200 h-[550px] bg-transparent backdrop-blur-3xl border-transparent shadow-2xl shadow-orange-300"
+                                className="card bg-base-200 h-[550px] backdrop-blur-3xl border-transparent  shadow-2xl bg-transparent dark:bg-[#1f1f38] shadow-orange-800 dark:shadow-indigo-800"
                             >
                                 <figure className="px-10 pt-10">
                                     <img

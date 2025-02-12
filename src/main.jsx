@@ -16,6 +16,7 @@ import RoomDetails from './Components/Rooms/RoomDetails';
 import Reactmaps from './Components/Reactmaps';
 import ProvideTheme from './Components/ThemeContext';
 import UserProfile from './Components/UserProfile';
+import Contact from './Components/Contact';
 
 const router = createBrowserRouter(
   [
@@ -58,6 +59,10 @@ const router = createBrowserRouter(
       element: <PrivateRoute><UserProfile/></PrivateRoute>
     },
     {
+      path: "/contact",
+      element: <PrivateRoute><Contact/></PrivateRoute>
+    },
+    {
       path: "*",
       element: <ErrorBoundary></ErrorBoundary>
     },
@@ -72,10 +77,10 @@ const router = createBrowserRouter(
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
+    <ProvideTheme>
     <AuthProviderx>
-      <ProvideTheme>
       <RouterProvider router={router}></RouterProvider>
-      </ProvideTheme>
+      
     <ToastContainer
     position="top-right"
     autoClose={2000}
@@ -90,5 +95,6 @@ createRoot(document.getElementById('root')).render(
     transition={Bounce}
     />
     </AuthProviderx>
+    </ProvideTheme>
   </StrictMode>,
 )
