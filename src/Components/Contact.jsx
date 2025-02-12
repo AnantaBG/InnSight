@@ -10,16 +10,16 @@ const Contact = () => {
     return (
         <div>
           <Navbar></Navbar>
-          <div className="  mx-auto w-11/12">
+          <div className="mx-auto w-11/12">
         <div className="flex mb-10 flex-col justify-center mx-auto text-center">
             
-            <h2 className="sm:text-4xl text-3xl mt-4 text-[#4db5ff]">Contact Me</h2>
+            <h2 className=" text-4xl font-bold mt-4 text-[#a2d5fd] ">Contact Me</h2>
         </div>
             <div className="grid gap-8">
                 {/* Contact Options */}
-                <div className="dark:bg-[#1f1f38] flex flex-col  justify-center mx-auto transition duration-[600ms] ease-in-out ">
+                <div className="dark:bg-[#1f1f38] flex flex-col  justify-center mx-auto transition duration-[600ms] ease-in-out md:grid md:grid-cols-2 gap-2">
                 <div className="card hover:brightness-75 items-center flex flex-col  mb-2">
-                    <div className=" card-body bg-transparent  min-w-full border-transparent shadow-md shadow-orange-500 dark:shadow-blue-400 ">
+                    <div className=" card-body bg-transparent min-w-full border-transparent shadow-md shadow-orange-500 dark:shadow-blue-400 ">
                     <MdOutlineEmail className="text-3xl" />
                     <h4 className="text-base">Email</h4>
                     <h5 className="text-sm">anantabanikofficial@gmail.com</h5>

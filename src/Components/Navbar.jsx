@@ -26,18 +26,19 @@ const Navbar = () => {
 
     return (
         <div className="mb-40">
-            <div className="navbar px-4 text-slate-950 dark:text-[#a2d5fd]   mx-auto bg-transparent dark:bg-cyan-950 top-0 backdrop-blur-3xl border-transparent">
+            <div className="navbar pt-0 text-slate-950 dark:text-[#a2d5fd] bg-transparent dark:bg-cyan-950 top-0 backdrop-blur-3xl border-transparent">
+                <div className="w-11/12 mx-auto">
                 <div className="navbar-start">
-                    <div className="dropdown">
-                        <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
-                            <BiMenu className="text-3xl" />
+                    <div className="dropdown ">
+                        <div tabIndex={0} role="button" className="btn  btn-ghost lg:hidden">
+                            <BiMenu className="text-5xl " />
                         </div>
                         <div
                             tabIndex={0}
                             className="menu menu-sm dropdown-content bg-gray-400 dark:bg-slate-800 rounded-box z-[1] mt-3 w-60 p-2 shadow-2xl"
                         >
                             <img src={logo} alt="" />
-                            <ul className="flex flex-col gap-y-5 justify-center mx-auto mt-10 mb-3">
+                            <ul className="flex  flex-col gap-y-5 justify-center mx-auto mt-10 mb-3">
                                 <NavLink to="/"> <li className="btn w-full ">Home</li></NavLink>
                                 <NavLink to="/rooms"> <li className="btn w-full ">Rooms</li></NavLink>
                                 {user && user?.email ? (
@@ -70,7 +71,7 @@ const Navbar = () => {
                     </div>
                     <img className="invisible lg:visible h-20" src={logo} alt="" />
                 </div>
-                <div className="navbar-center hidden lg:flex">
+                <div className="navbar-end hidden lg:flex">
                     <ul className="menu menu-horizontal px-1 gap-x-2 text-2xl">
                         <NavLink to="/"> <li className="btn">Home</li></NavLink>
                         <NavLink to="/rooms"> <li className="btn w-full ">Rooms</li></NavLink>
@@ -100,6 +101,8 @@ const Navbar = () => {
                         </li>
                     </ul>
                 </div>
+                </div>
+
             </div>
         </div>
     );

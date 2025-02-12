@@ -213,7 +213,7 @@ const RoomDetails = () => {
                 <Helmet>
                 <title>{name} Details</title>
                </Helmet>
-                    <div className="w-11/12 md:h-3/5  lg:w-1/2 mt-20 mx-auto">
+                    <div className="w-11/12 md:h-3/5  lg:w-1/2 pt-10 mx-auto">
                         <div className="card w-full py-5 bg-transparent backdrop-blur-3xl border-transparent shadow-2xl dark:bg-[#1f1f38] shadow-orange-800 dark:shadow-indigo-800">
                             <figure className="px-10 pt-10">
                             <div className="carousel rounded-box w-[500px]">
