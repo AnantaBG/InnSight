@@ -5,10 +5,23 @@
 a.active{
     background: linear-gradient(to right, rgb(229, 134, 134), blue);
     border-radius:16%;
-    color: #fff;
+    color: #ffffff;
 }
 .leaflet-container {
     width: 70%;
     height:80vh;
     border-radius: 30px;
+}
+.navbar {
+    z-index: 9999;
+    position: fixed;
+}
+body.dark {
+    color: #ffffff; /* White text in dark mode */
+    transition: color 0.3s ease ease-in;
+
+}
+body {
+
+    transition: color 0.3s ease-out;
 }

@@ -14,9 +14,9 @@ const Reactmaps = () => {
 
   return (
             <div className="mt-20">
-                <h2 className="text-6xl font-bold font-mono flex justify-center mb-5 mx-auto">Map</h2>
+                <h2 className="text-6xl font-bold font-mono flex justify-center mb-5 mx-auto dark:text-[#a2d5fd] ">Map</h2>
                 <div className="mx-auto flex justify-center mb-10">
-                <MapContainer center={[23.777176, 90.399452]} zoom={7} scrollWheelZoom={false}>
+                <MapContainer  center={[23.777176, 90.399452]} zoom={7} scrollWheelZoom={false}>
                     <TileLayer
                     attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
                     url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"

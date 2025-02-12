@@ -202,7 +202,7 @@ const RoomDetails = () => {
                </Helmet>
                 <Navbar></Navbar>
                     <div className="w-11/12 md:h-3/5 lg:w-1/2 mt-10 mx-auto">
-                        <div className="card bg-base-100 w-full py-5 bg-transparent backdrop-blur-3xl border-transparent shadow-2xl shadow-orange-300">
+                        <div className="card w-full py-5 bg-transparent backdrop-blur-3xl border-transparent shadow-2xl shadow-orange-300">
                             <figure className="px-10 pt-10">
                             <div className="carousel rounded-box w-[500px]">
                             <div className="carousel-item w-full">
@@ -277,7 +277,7 @@ const RoomDetails = () => {
                             </div>
                         </div>
                         {isModalOpen && (
-                <div className="fixed justify-center mx-auto top-32 right-0 left-0 bottom-32 rounded-xl w-[300px] md:w-[400px] lg:w-[500px] bg-current h-auto  flex flex-col text-center " style={{ 
+                <div className="fixed justify-center z-10 mx-auto top-32 right-0 left-0 bottom-32 rounded-xl w-[300px] md:w-[400px] lg:w-[500px] bg-current h-auto  flex flex-col text-center " style={{ 
                     backgroundImage: `url(${modalimage})`
                     
                   }}>

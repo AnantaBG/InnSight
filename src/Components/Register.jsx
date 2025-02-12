@@ -102,11 +102,11 @@ const navigate = useNavigate();
               )
             }
           <div className="form-control mt-6">
-            <button className="btn bg-gray-400">Register</button>
+            <button className="btn bg-gray-400 dark:bg-[#496b84]">Register</button>
           </div>
         </form>
         <div onClick={handleGoogleSignUp} className="form-control mt-6">
-            <button className="btn bg-gray-400"><FcGoogle className="text-2xl"></FcGoogle> SignUp With Google</button>
+            <button className="btn bg-gray-400 dark:bg-[#496b84]"><FcGoogle className="text-2xl"></FcGoogle> SignUp With Google</button>
           </div>
         <p>Already Have an Account! <Link  className="text-red-500 underline" to="/login">Login Now!</Link></p>
       </div>

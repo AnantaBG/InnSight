@@ -14,23 +14,26 @@ import TopRatedRooms from './Components/Rooms/TopRatedRooms';
 import PrivateRoute from './PrivateRoute';
 import RoomDetails from './Components/Rooms/RoomDetails';
 import Reactmaps from './Components/Reactmaps';
-
+import ProvideTheme from './Components/ThemeContext';
 
 const router = createBrowserRouter(
   [
     {
-      path: "/",
-      element: <App></App>,
-      loader: () => fetch('https://inn-sight-server.vercel.app/sortedRooms')
-    },
-    {
-      path: "/",
-      element: <TopRatedRooms></TopRatedRooms>
-    },
-    {
-      path: "/",
-      element: <Reactmaps></Reactmaps>
-    },
+      path: "/", // Main app route (renders App with background and Navbar)
+      element: <App />,
+      loader: () => fetch('https://inn-sight-server.vercel.app/sortedRooms'),
+      children: [ // Nested routes
+          {
+              path: "top-rated", // Unique path
+              element: <TopRatedRooms />,
+          },
+          {
+              path: "map", // Unique path
+              element: <Reactmaps />,
+          },
+          // ... other nested routes as needed
+      ],
+  },
     {
       path: "/login",
       element: <Login></Login>
@@ -64,21 +67,23 @@ const router = createBrowserRouter(
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-      <AuthProviderx>
-    <RouterProvider router={router}></RouterProvider>
+    <AuthProviderx>
+      <ProvideTheme>
+      <RouterProvider router={router}></RouterProvider>
+      </ProvideTheme>
     <ToastContainer
-position="top-right"
-autoClose={2000}
-hideProgressBar={false}
-newestOnTop={false}
-closeOnClick={false}
-rtl={false}
-pauseOnFocusLoss
-draggable
-pauseOnHover
-theme="light"
-transition={Bounce}
-/>
+    position="top-right"
+    autoClose={2000}
+    hideProgressBar={false}
+    newestOnTop={false}
+    closeOnClick={false}
+    rtl={false}
+    pauseOnFocusLoss
+    draggable
+    pauseOnHover
+    theme="light"
+    transition={Bounce}
+    />
     </AuthProviderx>
   </StrictMode>,
 )

@@ -37,31 +37,31 @@ const Rooms = () => {
     }
 
     return (
-        <div>
+        <div className="mt-20">
             <Navbar />
             <Helmet>
                 <title>All Availiable Rooms</title>
             </Helmet>
             <section className="w-11/12 mx-auto my-10">
                 <Slide>
-                    <h2 className="text-4xl flex justify-center mx-auto">
+                    <h2 className="text-4xl mb-5 flex justify-center dark:text-[#a2d5fd] mx-auto">
                         All Rooms Availiable: {filteredRooms.length} {/* Show filtered count */}
                     </h2>
                 </Slide>
 
                 {/* Price Range Filter */}
                 <div className="mb-5">
-                    <label htmlFor="priceRange" className="mr-2 font-bold">Filter by Price:</label>
+                    <label htmlFor="priceRange" className="mr-2 font-bold dark:text-[#a2d5fd]">Filter by Price:</label>
                     <select
                         id="priceRange"
                         value={priceRange}
                         onChange={handlePriceRangeChange}
-                        className="border bg-transparent backdrop-blur-3xl  shadow-2xl shadow-orange-300 rounded-xl px-3 py-2"
+                        className="border bg-transparent dark:bg-black backdrop-blur-3xl  shadow-2xl shadow-orange-300 rounded-xl px-3 py-2"
                     >
                         <option value="all">All</option>
-                        <option value="0-99">0 - 99</option>
-                        <option value="100-149">100 - 149</option>
-                        <option value="150-250">150 - 200</option>
+                        <option value="0-99">0 - 99$</option>
+                        <option value="100-149">100 - 149$</option>
+                        <option value="150-250">150 - 200$</option>
                         {/* Add more price ranges as needed */}
                     </select>
                 </div>
@@ -81,21 +81,21 @@ const Rooms = () => {
                                     />
                                 </figure>
                                 <div className="card-body">
-                                    <h2 className="card-title text-center font-mono font-extrabold text-white text-2xl">
+                                    <h2 className="card-title text-center font-mono font-extrabold text-white text-2xl dark:text-[#a2d5fd]">
                                         {Room.name}
                                     </h2>
                                     <p>
-                                        <strong className="text-black font-mono font-extrabold text-xl">
+                                        <strong className="text-black font-mono font-extrabold text-xl dark:text-[#a2d5fd]">
                                             Room Description:
                                         </strong>{" "}
                                         <span className="opacity-75 font-serif">{Room.description}</span>
                                     </p>
                                     <p>
-                                        <strong className="text-black font-mono font-extrabold text-xl">Rating:</strong>{" "}
+                                        <strong className="text-black dark:text-[#a2d5fd] font-mono font-extrabold text-xl">Rating:</strong>{" "}
                                         <span className="opacity-75 font-serif">{Room.rating}</span>
                                     </p>
                                     <p>
-                                        <strong className="text-black font-mono font-extrabold text-xl">Rent:</strong>{" "}
+                                        <strong className="text-black dark:text-[#a2d5fd] font-mono font-extrabold text-xl">Rent:</strong>{" "}
                                         <span className="opacity-75 font-serif">{Room.price}</span>
                                     </p>
                                 </div>

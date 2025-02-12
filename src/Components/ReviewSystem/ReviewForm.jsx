@@ -34,6 +34,7 @@ const ReviewForm = ({roomName, roomId, onSubmit, onClose }) => {
           value={rating} 
           onChange={(e) => setRating(Number(e.target.value))}
           required 
+          className="dark:bg-[#496b84]"
           
         >
           <option value="1">0</option>
@@ -52,7 +53,7 @@ const ReviewForm = ({roomName, roomId, onSubmit, onClose }) => {
           onChange={(e) => setComment(e.target.value)}
           required 
           rows={4} 
-          className="w-full border border-gray-300 rounded-md p-2" 
+          className="w-full border dark:bg-[#496b84] border-gray-300 rounded-md p-2" 
         />
       </div>
       <div className="flex justify-end">

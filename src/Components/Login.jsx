@@ -68,12 +68,12 @@ const [showPassword, setShowPassword] = useState(false);
 
           </div>
           <div className="form-control mt-6">
-            <button className="btn bg-gray-400">Login</button>
+            <button className="btn bg-gray-400 dark:bg-[#496b84]">Login</button>
           </div>
           
         </form>
         <div onClick={handleGoogleSignIn} className="form-control mt-6">
-            <button className="btn bg-gray-400"><FcGoogle className="text-2xl"></FcGoogle> Login With Google</button>
+            <button className="btn bg-gray-400 dark:bg-[#496b84]"><FcGoogle className="text-2xl"></FcGoogle> Login With Google</button>
           </div>
         <p>Dont have a Account? <Link  className="text-red-500 underline" to="/register">Register!</Link></p>
       </div>

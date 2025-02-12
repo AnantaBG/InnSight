@@ -208,7 +208,7 @@ Swal.fire({
 
 
     return (
-        <div>
+        <div className="mt-10">
             <Helmet>
                 <title>Bookings Page</title>
             </Helmet>
@@ -269,8 +269,8 @@ Swal.fire({
           ))}
       {/* Review Form (moved outside the map function) */}
       {isReviewOpen && (
-        <div className="fixed top-0 left-0 w-full h-full flex items-center justify-center bg-black/50 z-50"> 
-          <div className="bg-white p-6 rounded-lg shadow-md max-w-md"> 
+        <div className="fixed top-0 left-0 w-full h-full flex items-center justify-center bg-black/50  z-50"> 
+          <div className="bg-white dark:bg-[#496b84] p-6 rounded-lg shadow-md max-w-md"> 
             <ReviewForm 
               roomName={filteredName}
               roomId={selectedRoomId} 
@@ -294,14 +294,14 @@ Swal.fire({
                                 <form onSubmit={updateRoomData} className="card-body">
                                 <DatePicker
                                     placeholderText="Select Date"
-                                     className="input input-bordered w-full placeholder:text-white" 
+                                     className="input input-bordered w-full placeholder:text-white dark:placeholder:text-black" 
                                     selected={currentDate} name="date"
                                      onChange={date => setCurrentDate(date)}
                                      minDate={new Date()}
                                     required
                                      />
             
-                                    <input type="text" name="_id" className="input hidden input-bordered w-1/2 placeholder:text-white" defaultValue="_id" />
+                                    <input type="text" name="_id" className="input hidden input-bordered w-1/2 placeholder:text-white dark:placeholder:text-black" defaultValue="_id" />
                                     <input type="submit"  value="Update Date" className="btn  btn-primary flex w-full justify-center bottom-0" /> 
                                     
                                     
