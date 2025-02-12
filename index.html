@@ -13,25 +13,24 @@
     crossorigin=""></script>
   </head>
   <body class="bg-fixed" data-theme="light">
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
-
     <script class="bg-fixed">
         window.addEventListener('themeChange', (event) => {
             const newTheme = event.detail.theme;
             setBackgroundImage(newTheme);
         });
 
-        function setBackgroundImage(theme) {
-            const body = document.body;
-            if (theme === 'light') {
-                body.style.backgroundImage = 'url(./src/assets/2.png)';
-                body.classList.remove('dark');
-            } else if (theme === 'dark') {
-                body.style.backgroundImage = 'url(./src/assets/1.png)';
-                body.classList.add('dark');
-            }
-        }
+        // function setBackgroundImage(theme) {
+        //     const body = document.body;
+        //     if (theme === 'light') {
+        //         body.style.backgroundImage = 'url(./2.png)';
+        //         body.classList.remove('dark');
+        //     } else if (theme === 'dark') {
+        //         body.style.backgroundImage = 'url(./1.png)';
+        //         body.classList.add('dark');
+        //     }
+        // }
     </script>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
 </body>
 </html>

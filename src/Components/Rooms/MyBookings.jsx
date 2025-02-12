@@ -10,10 +10,16 @@ import { Helmet } from "react-helmet";
 import Footer from "../Footer";
 import modalimage from '../../assets/4.png'
 import ReviewForm from "../ReviewSystem/ReviewForm";
-
+import img1 from '../../assets/1.png'
+import img2 from '../../assets/21.png'
+import { ThemeContext } from "../ThemeContext";
 
 
 const MyBookings = () => {
+  const { theme } = useContext(ThemeContext);
+          const getBackgroundImage = () => {
+              return theme === 'light' ? img2 : img1;
+          };
 
     const BookedRoom = useLoaderData();
     const [rooms, setRooms] = useState(BookedRoom);
@@ -208,7 +214,14 @@ Swal.fire({
 
 
     return (
-        <div className="mt-10">
+      <div className={`-mt-20 pt-20 ${theme === 'dark' ? 'dark' : ''} min-h-screen`}
+      style={{
+        backgroundImage: `url(${getBackgroundImage()})`,
+        backgroundSize: 'cover',
+        height:'1280px',
+        backgroundRepeat: 'no-repeat',
+        transition: 'background-image 0.3s ease'
+      }}>
             <Helmet>
                 <title>Bookings Page</title>
             </Helmet>
@@ -216,7 +229,7 @@ Swal.fire({
             <div className="  w-11/12 mx-auto mt-10">
 
           {filteredRooms.map(({ _id, photo, name, rent, email, FirstName, LastName, date }) => (
-            <div key={_id} className="overflow-x-auto">
+            <div key={_id} className="overflow-x-auto dark:text-white">
             <table className="table">
               {/* head */}
               <thead>

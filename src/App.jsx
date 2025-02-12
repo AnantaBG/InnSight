@@ -7,10 +7,13 @@ import Reactmaps from './Components/Reactmaps';
 import Companies from './Companies';
 import Students from './Consumers';
 import Footer from './Components/Footer';
-
+import img1 from './assets/1.png'
+import img2 from './assets/21.png'
 const App = () => {
   const { theme } = useContext(ThemeContext);
-
+  const getBackgroundImage = () => {
+      return theme === 'light' ? img2 : img1;
+  };
   useEffect(() => {
       document.body.classList.add('bg-fixed'); // Add bg-fixed class to body
       document.body.classList.toggle('dark', theme === 'dark'); // Toggle the dark class
@@ -20,7 +23,13 @@ const App = () => {
   });
 
     return (
-        <div className="min-h-screen"> 
+        <div className={`-mt-20 pt-20 ${theme === 'dark' ? 'dark' : ''} min-h-screen`}
+        style={{
+          backgroundImage: `url(${getBackgroundImage()})`,
+          backgroundSize: 'cover',
+          backgroundRepeat: 'no-repeat',
+          transition: 'background-image 0.3s ease'
+        }}> 
              <Navbar />
                 <Banner /> 
                 

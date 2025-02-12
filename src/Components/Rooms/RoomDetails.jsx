@@ -11,7 +11,7 @@ import { Helmet } from "react-helmet";
 import Footer from "../Footer";
 import { ThemeContext } from "../ThemeContext";
 import img1 from '../../assets/1.png'
-import img2 from '../../assets/2.png'
+import img2 from '../../assets/21.png'
 import { BiHome } from "react-icons/bi";
 const RoomDetails = () => {
       const { theme } = useContext(ThemeContext);

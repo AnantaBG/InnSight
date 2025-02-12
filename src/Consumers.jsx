@@ -19,7 +19,7 @@ const Students = () => {
                 className="rounded-xl h-48" />
             </figure>
             <div className="card-body  items-start text-center">
-                <h2 className="card-title dark:text-[#a2d5fd] ">Ryōta</h2>
+                <h2 className="card-title text-white dark:text-[#a2d5fd] ">Ryōta</h2>
                 <p className="text-left">I recently used [InnSight] to book a weekend getaway at a charming hotel in the countryside. The website was incredibly user-friendly. The booking process was seamless, and I received a confirmation email immediately. I would highly recommend [InnSight] to anyone looking for a hassle-free travel experience.</p>
             </div>
             </div>
@@ -31,7 +31,7 @@ const Students = () => {
                 className="rounded-xl h-48" />
             </figure>
             <div className="card-body items-start text-center">
-                <h2 className="card-title dark:text-[#a2d5fd] ">Natsuki</h2>
+                <h2 className="card-title text-white dark:text-[#a2d5fd] ">Natsuki</h2>
                 <p className="text-left">I&apos;ve used [InnSight] for years, and I&apos;ve always been impressed with their service. Their website is easy to navigate, and they have a wide selection of hotels to choose from. I would definitely recommend [InnSight] to anyone looking for a reliable and convenient way to book their travel.</p>
             </div>
             </div>
@@ -43,7 +43,7 @@ const Students = () => {
                 className="rounded-xl h-48" />
             </figure>
             <div className="card-body items-start text-center">
-                <h2 className="card-title dark:text-[#a2d5fd] ">Ken</h2>
+                <h2 className="card-title text-white dark:text-[#a2d5fd] ">Ken</h2>
                 <p className="text-left">I was planning a surprise trip for my partner, and I wanted to find a unique and romantic hotel. [InnSight] had a huge selection of hotels to choose from, including boutique hotels, luxury resorts, and even treehouses!I received a confirmation email immediately.</p>
             </div>
             </div>

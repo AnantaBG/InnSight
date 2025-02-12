@@ -17,7 +17,7 @@ const Companies = () => {
                 className="rounded-xl" />
             </figure>
             <div className="card-body items-start text-center">
-                <h2 className="card-title dark:text-[#a2d5fd] ">Globetrotter Getaways Inc.</h2>
+                <h2 className="card-title text-white dark:text-[#a2d5fd] ">Globetrotter Getaways Inc.</h2>
                 <p className="text-left">
 
                 Slogan: Your Passport to Amazing Deals!
@@ -38,7 +38,7 @@ const Companies = () => {
                 className="rounded-xl" />
             </figure>
             <div className="card-body items-start text-center">
-                <h2 className="card-title text-left dark:text-[#a2d5fd] ">Guest-Centric Technology Solutions</h2>
+                <h2 className="text-white card-title text-left dark:text-[#a2d5fd] ">Guest-Centric Technology Solutions</h2>
                 <p className="text-left">
                 GuestConnect: Smart room control, mobile app, personalized recommendations
                 Culinary Adventures: VR experiences
@@ -57,7 +57,7 @@ const Companies = () => {
                 className="rounded-xl" />
             </figure>
             <div className="card-body items-start text-center">
-                <h2 className="card-title text-left dark:text-[#a2d5fd] ">Strategic Community Alliances</h2>
+                <h2 className="text-white card-title text-left dark:text-[#a2d5fd] ">Strategic Community Alliances</h2>
                 <p className="text-left"> 
                 Pawsome Staycation: Pets welcome, store discounts, dog park access
                 Art & Appetite: Art tour, cooking class, gourmet dinner

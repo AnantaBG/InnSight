@@ -7,9 +7,14 @@ import { Slide } from "react-awesome-reveal";
 import { Helmet } from "react-helmet";
 import Footer from "../Footer";
 import { ThemeContext } from "../ThemeContext";
+import img1 from '../../assets/1.png'
+import img2 from '../../assets/21.png'
 
 const Rooms = () => {
     const { theme } = useContext(ThemeContext);
+      const getBackgroundImage = () => {
+          return theme === 'light' ? img2 : img1;
+      };
   
     useEffect(() => {
         document.body.classList.add('bg-fixed'); // Add bg-fixed class to body
@@ -47,15 +52,21 @@ const Rooms = () => {
     }
 
     return (
-        <div className="mt-20">
+        <div className={`-mt-20 pt-20 ${theme === 'dark' ? 'dark' : ''} min-h-screen`}
+        style={{
+          backgroundImage: `url(${getBackgroundImage()})`,
+          backgroundSize: 'cover',
+          backgroundRepeat: 'no-repeat',
+          transition: 'background-image 0.3s ease'
+        }}>
             <Navbar />
             <Helmet>
-                <title>All Availiable Rooms</title>
+                <title>All Available Rooms</title>
             </Helmet>
             <section className="w-11/12 mx-auto my-10">
                 <Slide>
                     <h2 className="text-4xl mb-5 flex justify-center dark:text-[#a2d5fd] mx-auto">
-                        All Rooms Availiable: {filteredRooms.length} {/* Show filtered count */}
+                        All Rooms Available: {filteredRooms.length} {/* Show filtered count */}
                     </h2>
                 </Slide>
 

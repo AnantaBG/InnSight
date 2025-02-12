@@ -13,19 +13,16 @@ export const ProvideTheme = ({ children }) => {
 
     useEffect(() => {
 
-        console.log("Setting theme to:", theme); // Log BEFORE localStorage update
 
-        localStorage.setItem('theme', theme); // FIRST: Update localStorage (CRITICAL)
+        localStorage.setItem('theme', theme); 
 
-        console.log("localStorage updated to:", localStorage.getItem('theme')); // Log AFTER localStorage update
+        document.documentElement.setAttribute('data-theme', theme); 
 
-        document.documentElement.setAttribute('data-theme', theme); // Set data-theme attribute (optional, but good practice)
+        const event = new CustomEvent('themeChange', { detail: { theme } }); 
 
-        const event = new CustomEvent('themeChange', { detail: { theme } }); // Create the event
+        window.dispatchEvent(event);
 
-        window.dispatchEvent(event); // THEN: Dispatch the event (CRITICAL)
 
-        console.log("themeChange event dispatched"); // Log after dispatching the event
 
     }, [theme]);
 

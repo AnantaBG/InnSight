@@ -7,9 +7,15 @@ import { AuthC } from "../Provider/AuthProviderx";
 import Navbar from "./Navbar";
 import { toast } from "react-toastify";
 import Footer from "./Footer";
-
+import img1 from '../assets/1.png'
+import img2 from '../assets/21.png'
+import { ThemeContext } from "./ThemeContext";
 
 const Register = () => {
+    const { theme } = useContext(ThemeContext);
+          const getBackgroundImage = () => {
+              return theme === 'light' ? img2 : img1;
+          };
   const {createNewUser, setUser, updateP, googleSignIn} = useContext(AuthC);
   const [error, setError] = useState({});
   const [showPassword, setShowPassword] = useState(false);
@@ -55,37 +61,43 @@ const navigate = useNavigate();
     })
   }
     return (
-<div>
+<div className={`-mt-20 pt-20 ${theme === 'dark' ? 'dark' : ''} min-h-screen`}
+      style={{
+        backgroundImage: `url(${getBackgroundImage()})`,
+        backgroundSize: 'cover',
+        backgroundRepeat: 'no-repeat',
+        transition: 'background-image 0.3s ease'
+      }}>
   <Navbar></Navbar>
 <div className="min-h-screen flex justify-center items-center">
             <Helmet>
                 <title>Register New Account</title>
             </Helmet>
         <div className="card bg-base-100 w-full max-w-lg shrink-0 p-10 shadow-xl">
-        <h2 className="text-3xl font-bold text-center">Register</h2>
+        <h2 className="text-3xl font-bold text-center dark:text-[#a2d5fd]">Register</h2>
         <form onSubmit={handleSubmit} className="card-body">
         <div className="form-control">
             <label className="label">
-              <span className="label-text">Name</span>
+              <span className="label-text dark:text-[#a2d5fd]">Name</span>
             </label>
             <input name="Name" type="text" placeholder="Name" className="input input-bordered" required />
           </div>
           <div className="form-control">
             <label className="label">
-              <span className="label-text">Photo Url</span>
+              <span className="label-text dark:text-[#a2d5fd]">Photo Url</span>
             </label>
             <input name="Photo" type="text" placeholder="Photo_Url" className="input input-bordered" required />
           </div>
           <div className="form-control">
             <label className="label">
-              <span className="label-text">Email</span>
+              <span className="label-text dark:text-[#a2d5fd]">Email</span>
             </label>
             <input name="Email" type="email" placeholder="email" className="input input-bordered" required />
           </div>
           
           <div className="form-control">
             <label className="label">
-              <span className="label-text">Password</span>
+              <span className="label-text dark:text-[#a2d5fd]">Password</span>
             </label>
             <input name="Password" type={showPassword ? "text" : "password"} placeholder="password" className="input input-bordered" required />
             <button className="ml-80 -translate-y-8 " type="button" onClick={() => setShowPassword(!showPassword)}>

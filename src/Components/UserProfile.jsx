@@ -3,15 +3,25 @@ import { Helmet } from "react-helmet";
 import { AuthC } from "../Provider/AuthProviderx";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
-
+import { ThemeContext } from "./ThemeContext";
+import img1 from '../assets/1.png'
+import img2 from '../assets/21.png'
 const UserProfile = () => {
     const {user} = useContext(AuthC);
-    console.log(user);
-    // const date = new Date(user.metadata.lastSignInTime)
-    // console.log(date)
+  const { theme } = useContext(ThemeContext
+  );
+        const getBackgroundImage = () => {
+            return theme === 'light' ? img2 : img1;
+        };
     return (
-        <div className="flex flex-col  mx-auto">
-          <Helmet>
+<div className={`-mt-20 pt-20 flex flex-col  mx-auto ${theme === 'dark' ? 'dark' : ''} min-h-screen`}
+      style={{
+        backgroundImage: `url(${getBackgroundImage()})`,
+        backgroundSize: 'cover',
+        height:'1280px',
+        backgroundRepeat: 'no-repeat',
+        transition: 'background-image 0.3s ease'
+      }}>          <Helmet>
                 <title>Your Profile</title>
       </Helmet>
       <Navbar></Navbar>
@@ -31,7 +41,7 @@ const UserProfile = () => {
         <h5 className="card-title  font-mono font-extrabold text-white dark:text-[#a2d5fd] text-2xl">{user.displayName}</h5>
         <span className="text-sm text-white opacity-80 dark:text-[#a2d5fd]">{user.email}</span>
         <div className="mt-5">
-        <p>Last Logged in on:<span className="text-sm text-white dark:text-[#a2d5fd] opacity-80"> {user.metadata.lastSignInTime}</span></p>
+        <p className="dark:text-white">Last Logged in on:<span className="text-sm text-white dark:text-[#a2d5fd] opacity-80"> {user.metadata.lastSignInTime}</span></p>
         </div>
         </div>
       </div>
