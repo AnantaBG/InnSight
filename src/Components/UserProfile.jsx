@@ -10,7 +10,7 @@ const UserProfile = () => {
     // const date = new Date(user.metadata.lastSignInTime)
     // console.log(date)
     return (
-        <div className="flex flex-col mt-20 mx-auto">
+        <div className="flex flex-col  mx-auto">
           <Helmet>
                 <title>Your Profile</title>
       </Helmet>
