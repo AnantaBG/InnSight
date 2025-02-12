@@ -15,6 +15,7 @@ import PrivateRoute from './PrivateRoute';
 import RoomDetails from './Components/Rooms/RoomDetails';
 import Reactmaps from './Components/Reactmaps';
 import ProvideTheme from './Components/ThemeContext';
+import UserProfile from './Components/UserProfile';
 
 const router = createBrowserRouter(
   [
@@ -51,6 +52,10 @@ const router = createBrowserRouter(
       path: "/mybookings",
       element: <PrivateRoute><MyBookings></MyBookings></PrivateRoute>,
       loader: () => fetch(`https://inn-sight-server.vercel.app/BookedRooms`)
+    },
+    {
+      path: "/myprofile",
+      element: <PrivateRoute><UserProfile/></PrivateRoute>
     },
     {
       path: "*",

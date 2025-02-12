@@ -34,7 +34,7 @@ const Navbar = () => {
                         </div>
                         <div
                             tabIndex={0}
-                            className="menu menu-sm dropdown-content bg-gray-400 rounded-box z-[1] mt-3 w-60 p-2 shadow-2xl"
+                            className="menu menu-sm dropdown-content bg-gray-400 dark:bg-slate-800 rounded-box z-[1] mt-3 w-60 p-2 shadow-2xl"
                         >
                             <img src={logo} alt="" />
                             <ul className="flex flex-col gap-y-5 justify-center mx-auto mt-10 mb-3">
@@ -50,11 +50,20 @@ const Navbar = () => {
                                 ) : (
                                     <NavLink to="/register"><li className="btn w-full">Register</li></NavLink>
                                 )}
-                                <NavLink to="/rooms"> <li className="btn w-full ">About Us</li></NavLink>
+                                {user && user?.email ? (
+                                    <NavLink to="/myprofile"> <li className="btn w-full ">My Profile</li></NavLink>
+                                ) : (
+                                    ''
+                                )}
+                                
                                 <NavLink to="/rooms"> <li className="btn w-full ">Contact Us</li></NavLink>
                                 {/* Theme Toggle (Mobile) */}
-                                <li className="btn w-full" onClick={toggleTheme}>
-                                    {theme === 'light' ? 'Dark Mode' : 'Light Mode'}
+                                <li className="btn rounded-full p-0" onClick={toggleTheme}>
+                                {theme === 'light' ? <div className="text-2xl">
+                            <BiMoon></BiMoon>
+                            </div>:<div className="text-2xl">
+                            <BiSun></BiSun>
+                                </div>}
                                 </li>
                             </ul>
                         </div>
@@ -75,7 +84,11 @@ const Navbar = () => {
                         ) : (
                             <NavLink to="/register"><li className="btn w-full">Register</li></NavLink>
                         )}
-                        <NavLink to="/rooms"> <li className="btn w-full ">About Us</li></NavLink>
+                        {user && user?.email ? (
+                                    <NavLink to="/myprofile"> <li className="btn w-full ">My Profile</li></NavLink>
+                                ) : (
+                                    ''
+                                )}
                         <NavLink to="/rooms"> <li className="btn w-full ">Contact Us</li></NavLink>
                         {/* Theme Toggle (Desktop) */}
                         <li className="btn rounded-full p-0" onClick={toggleTheme}>
